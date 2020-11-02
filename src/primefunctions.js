@@ -61,6 +61,13 @@ function maxPrimeSum(n) {
   let output3 = [0, 0]; // each output var is another step of sorting data
 
   let i; let num; let k; let j;
+  /*
+  many sums of consecutive primes are calculated by removing 1 from
+  the stack at a time. i.e.
+  [1,2,3,4] -> [1,3,6,10]
+  [2,3,4]   -> [2,5,9]
+  [3,4] ......
+   */
   for (i = 0; i < primes.length; i++) {
     num = 0;
     k = 0;
